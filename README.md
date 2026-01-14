@@ -1,3 +1,7 @@
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![JavaFX](https://img.shields.io/badge/JavaFX-blue?style=for-the-badge&logo=java&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![MVC](https://img.shields.io/badge/Architecture-MVC-green?style=for-the-badge)
 # 🏬 WholeSale-Shop | JavaFX CRUD Application
 
 WholeSale-Shop is a JavaFX-based desktop application developed to manage customer and item records efficiently for a wholesale business environment.  
@@ -130,6 +134,11 @@ FXML interfaces are modular and grouped by functionality, ensuring easy navigati
 
 This project emphasizes **clean architecture, strong validation logic, and self-written implementations** following OOP best practices.  
 All validations and business logic are manually implemented to ensure data integrity and reliability.
+
+---
+
+## 🔐 Security Note
+Database credentials are excluded from this repository for security reasons.
 
 ---
 
