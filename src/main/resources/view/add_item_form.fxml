@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #f4f7f6;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddItemFormController">
+    <children>
+        <AnchorPane prefHeight="90.0" prefWidth="800.0" style="-fx-background-color: #27ae60;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="30.0" layoutY="30.0" text="REGISTER NEW ITEM / PRODUCT" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane layoutX="60.0" layoutY="120.0" prefHeight="330.0" prefWidth="680.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);">
+            <children>
+                <GridPane hgap="30.0" layoutX="40.0" layoutY="40.0" prefWidth="600.0" vgap="20.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Item Code" textFill="#95a5a6" />
+                        <JFXTextField fx:id="txtItemCode" editable="false" focusColor="#27ae60" style="-fx-font-weight: bold; -fx-text-fill: #27ae60;" GridPane.columnIndex="1" />
+
+                        <Label text="Description" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="txtDescription" onAction="#txtDescriptionOnAction" promptText="e.g. Red Raw Rice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="Pack Size" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="txtPackSize" onAction="#txtPackSizeOnAction" promptText="e.g. 5kg, 400g, Pack of 10" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label text="Unit Price (Rs.)" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="txtUnitPrice" onAction="#txtUnitPriceOnAction" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <Label text="Qty On Hand" GridPane.rowIndex="4" />
+                        <JFXTextField fx:id="txtQtyOnHand" promptText="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    </children>
+                </GridPane>
+            </children>
+        </AnchorPane>
+
+        <HBox alignment="CENTER" layoutX="60.0" layoutY="475.0" prefWidth="680.0" spacing="40.0">
+            <children>
+                <JFXButton fx:id="btnBack" onAction="#btnBackOnAction" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 5; -fx-cursor: hand;" text="Back">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnAddItem" onAction="#btnAddItemOnAction" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: #27ae60; -fx-background-radius: 5; -fx-cursor: hand;" text="Save Item" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

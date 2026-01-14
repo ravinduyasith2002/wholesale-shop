@@ -1,0 +1,4 @@
+# db.properties.example (Safe to upload to GitHub)
+db.url=jdbc:mysql://localhost:3306/YOUR_DATABASE_NAME
+db.user=YOUR_USERNAME
+db.password=YOUR_PASSWORD
